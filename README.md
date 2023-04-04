@@ -8,8 +8,10 @@ Flask 1.1.2 or higher
 Flask-SQLAlchemy
 I was also using the venv virtual environment to run the project. This can be ran using the commands: 
 
+```
 python3 -m venv venv
 source venv/bin/activate
+```
 
 # Installation
 Clone the repository to your local machine
