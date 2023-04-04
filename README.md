@@ -20,7 +20,7 @@ source venv/bin/activate
 # Usage
 - To run the application, navigate to the correct directory and type python app.py in the terminal.
     -- Alternatively, run the file in an IDE like VSCode as I do in the tutorial. 
-- In your browser, navigate to localhost:5000 to access the job board homepage
+- In your browser, navigate to ```http://127.0.0.1:5000``` to access the job board homepage
 - From the homepage, you can browse job listings, add new job listings, and delete job listings
 
 # Architecture Design
