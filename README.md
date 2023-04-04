@@ -3,9 +3,9 @@
 This is a web application built with Flask that allows users to post and browse job listings.
 
 # Prerequisites
-Python 3.6 or higher
-Flask 1.1.2 or higher
-Flask-SQLAlchemy
+- Python 3.6 or higher
+- Flask 1.1.2 or higher
+- Flask-SQLAlchemy
 I was also using the venv virtual environment to run the project. This can be ran using the commands: 
 
 ```
