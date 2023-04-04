@@ -23,7 +23,8 @@ with app.app_context():
 
 @app.route('/')
 def index():
-    return 'Hello, World!'
+    jobs = Job.query.all()
+    return render_template('index.html', jobs=jobs)
 
 @app.route('/index')
 def job_board():
