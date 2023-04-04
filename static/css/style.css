@@ -1,0 +1,141 @@
+
+/* css */
+
+
+:root {
+  --white: #FFFFFF;
+  --teal: #9BFCF1;
+  --green: #68AF9C;
+  --pink: #EC3B82;
+  --purp: #5946B1;
+  --peri: #6E64C2;
+  --rect-height: 475px;
+  --light-green: #008081;
+  --grey: #E5E5E5;
+  --brown: #D98337;
+}
+
+body {
+	text-align: center;
+  background-image: url("../img/background.jpeg");
+}
+
+.box {
+  margin-top: 100px;
+  background-color: red;
+  width: 300px;
+  height: auto;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+header {
+	background: #262626;
+	z-index: 10;
+}
+
+nav {
+	float: center;
+	line-height: 50px;
+}
+
+.delete-form{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--white);
+  border-color: var(--white);
+  border-style:solid;
+  border-width: thin;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--black);
+  margin-bottom: 10px;
+  font-family: 'Rozha One', serif;
+}
+
+
+#button {
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--white);
+  border-color: var(--white);
+  border-style:solid;
+  border-width: thin;
+  font-size: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--black);
+  margin-top: 40px;
+  font-family: 'Rozha One', serif;
+}
+
+#add {
+  margin-left: auto;
+  margin-right: auto;
+  background: none;
+  width: 200px;
+  border-color: var(--white);
+  border-style:solid;
+  border-width: thin;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: var(--white);
+  font-family: 'Rozha One', serif;
+}
+
+a { 
+  color: inherit; 
+} 
+
+a:link { text-decoration: none; }
+
+
+h2 {
+  padding-top: 40px;
+	font-size: 100px;
+	font-family: 'Iceberg', cursive;
+	text-transform: uppercase;
+	color: var(--brown);
+}
+
+.border{
+  color: var(--black);
+  background-color: var(--white);
+  border-width: 3pt;
+  margin-bottom: 10px;
+}
+
+.writing {
+    font-family: 'Galdeano', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: var(--white);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+input{
+
+  margin: 10px;
+}
+
+.view{
+  background-color: lightgrey;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 250px;
+  width: 60%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border-color: #262626;
+  border-style: solid;
+}
+
+.view #button{
+  border-style: solid;
+  border-color: black;
+}

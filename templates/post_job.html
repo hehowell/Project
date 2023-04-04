@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post a Job</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Galdeano&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    
+    <div class="container-fluid box-area">
+      <div class="row">
+        <header>
+          <h2 class="ama">Post a Job</h2>
+        </header>
+      </div>    
+    </div>
+    <div class="posted">
+      <form method="post" action="/add_job">
+          <h3>Title </h3> <input type="text" name="title" placeholder="Title" required><br>
+          <h3>Description </h3><input type="text" name="description" placeholder="Description" required><br>
+          <h3>Hourly Wage </h3><input type="number" name="hourly_wage" placeholder="Hourly Wage" required><br>
+          <h3>Contact Email </h3><input type="email" name="contact_email" placeholder="Contact Email" required><br>
+          <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+</html>

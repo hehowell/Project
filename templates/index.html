@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Galdeano&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <script src="{{ url_for('static', filename='js/script.js') }}"></script> -->
+
+    <div class="container-fluid box-area">
+        <div class="row">
+          <header>
+                <h2 class="ama">Bulletin Board</h2>
+                <button type="button" id="add">
+                    <a href="/post_job">Post a Job</a>
+                </button>
+          </header>
+        </div>    
+      </div>
+      
+
+    <script>titleList = [];</script>
+    {% for job in jobs %}
+    
+    <div id="{{ job.title.replace(' ', '_') }}" class="box">
+        
+        <div class="border">
+            <h3>{{ job.title }}</h3>
+        </div>
+        <div class="writing">
+            {{job.description}}
+          <p> Hourly Wage: ${{job.hourly_wage}}/hr</p>
+        </div>
+        <form class="delete-form" action="/delete_job/{{ job.id }}" method="POST">
+            <!-- <input type="submit" value="Delete Job"> -->
+            <button type="submit" style="border: none; background: none;">Delete Job</button>
+        </form>
+        <button type="button" id="button">
+            <a href="/job/{{ job.id }}">View Job</a>
+        </button>
+    </div>
+    <script> 
+        titleList.push("{{job.title}}");
+        console.log(titleList)
+     </script>
+    {% endfor %}
+
+
+    <footer>
+        <div class="container">
+            <p>Job Board &copy; 2023</p>
+        </div>
+    </footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script>
+    console.log(titleList)  
+    makebox(titleList);
+
+</script>
+
+</html>
